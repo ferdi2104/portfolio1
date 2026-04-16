@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: #333;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 30px;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .left {
+            flex: 1;
+        }
+
+        .right {
+            flex: 1;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .right h1 {
+            font-size: 60px;
+            margin: 0 0 20px 0;
+        }
+
+        .profile {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .profile img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-text h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .profile-text p {
+            margin: 5px 0;
+            font-size: 13px;
+            color: #666;
+        }
+
+        h3 {
+            margin: 20px 0 10px 0;
+            font-size: 16px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px 20px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .gallery-item {
+            height: 120px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+
+        .gallery-item:nth-child(1) { background: #667eea; color: white; }
+        .gallery-item:nth-child(2) { background: #f093fb; color: white; }
+        .gallery-item:nth-child(3) { background: #4facfe; color: white; }
+        .gallery-item:nth-child(4) { background: #43e97b; color: white; }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="list.html">Projects</a>
+    <a href="form.html">Contact</a>
+</nav>
+
+<div class="wrapper">
+    <div class="left">
+        <h1>Welcome to My Portfolio</h1>
+
+        <div class="profile">
+            <img src="ferdi.jpg" alt="profile" style="width:60px;height:60px;border-radius:50%;object-fit:cover;">
+            <div class="profile-text">
+                <h2>Ferdiyansyah Pratama Putra</h2>
+                <p>NIM: 241110117</p>
+                <p>Prodi: Informatika</p>
+            </div>
+        </div>
+
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+
+        <h3>Projects</h3>
+        <ul>
+            <li>Sistem Informasi Pajak</li>
+            <li>Software Akuntansi</li>
+            <li>Website Perusahaan</li>
+        </ul>
+
+        <h3>Contact</h3>
+        <form>
+            <label>Nama</label>
+            <input type="text">
+            <label>Email</label>
+            <input type="email">
+            <label>Message</label>
+            <textarea rows="5"></textarea>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <div class="right">
+        <h2 style="font-size: 24px; margin-bottom: 20px;">Recent Works</h2>
+
+        <div class="gallery">
+            <div class="gallery-item">Sistem Informasi Pajak</div>
+            <div class="gallery-item">Software Akuntansi</div>
+            <div class="gallery-item">Website Perusahaan</div>
+            <div class="gallery-item">Mobile App</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
