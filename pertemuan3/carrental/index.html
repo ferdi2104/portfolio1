@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental — Find Your Perfect Ride</title>
+    <meta name="description" content="Premium car rental service in Indonesia. Find the perfect car for your next adventure in Yogyakarta, Bali, Jakarta, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🚗</span>
+                <span class="logo-text">CarRental</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#cars" class="nav-link">Cars</a></li>
+                <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="#footer" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <header id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-badge">✨ Premium Car Rental Service</p>
+            <h1>Find the Perfect Car<br>for Your Next <span class="highlight">Adventure</span></h1>
+            <p class="hero-subtitle">Explore Indonesia with comfort and style. Choose from our wide selection of quality vehicles at affordable prices.</p>
+
+            <div class="search-form" id="search-form">
+                <div class="form-group">
+                    <label for="pickup">📍 Rental Location</label>
+                    <select id="pickup" name="pickup">
+                        <option value="">Select Location</option>
+                        <option value="yogyakarta">Yogyakarta</option>
+                        <option value="bali">Bali</option>
+                        <option value="jakarta">Jakarta</option>
+                        <option value="surabaya">Surabaya</option>
+                        <option value="bandung">Bandung</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-date">📅 Start Date</label>
+                    <input type="date" id="pickup-date" name="pickup-date">
+                </div>
+                <div class="form-group">
+                    <label for="return-date">📅 End Date</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+                <button type="submit" id="search-btn" class="btn-primary">
+                    Search Cars
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Cars Available</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Locations</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== CAR LIST SECTION ========== -->
+    <section id="cars" class="car-section">
+        <div class="section-header">
+            <p class="section-badge">Our Fleet</p>
+            <h2>Popular Cars</h2>
+            <p class="section-subtitle">Choose from our wide selection of well-maintained vehicles</p>
+        </div>
+
+        <div class="car-grid">
+
+            <article class="car-card">
+                <div class="car-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop"
+                        alt="Toyota Avanza Silver">
+                    <span class="car-badge popular">Popular</span>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <h3>Toyota Avanza</h3>
+                        <span class="car-type">MPV</span>
+                    </div>
+                    <div class="car-features">
+                        <span>👤 7 Seats</span>
+                        <span>⚙️ Manual</span>
+                        <span>⛽ Petrol</span>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-price">
+                            <span class="price">Rp 350.000</span>
+                            <span class="price-unit">/ day</span>
+                        </div>
+                        <button class="btn-rent" id="rent-avanza">Rent Now</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card">
+                <div class="car-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?q=80&w=800&auto=format&fit=crop"
+                        alt="Honda HR-V White SUV">
+                    <span class="car-badge best">Best Deal</span>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <h3>Honda HR-V</h3>
+                        <span class="car-type">SUV</span>
+                    </div>
+                    <div class="car-features">
+                        <span>👤 5 Seats</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⛽ Petrol</span>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-price">
+                            <span class="price">Rp 550.000</span>
+                            <span class="price-unit">/ day</span>
+                        </div>
+                        <button class="btn-rent" id="rent-hrv">Rent Now</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card">
+                <div class="car-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1606611013016-969c19ba27d5?q=80&w=800&auto=format&fit=crop"
+                        alt="Toyota Innova Black">
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <h3>Toyota Innova</h3>
+                        <span class="car-type">MPV</span>
+                    </div>
+                    <div class="car-features">
+                        <span>👤 8 Seats</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⛽ Diesel</span>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-price">
+                            <span class="price">Rp 650.000</span>
+                            <span class="price-unit">/ day</span>
+                        </div>
+                        <button class="btn-rent" id="rent-innova">Rent Now</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card">
+                <div class="car-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop"
+                        alt="Mazda MX-5 Red Sports Car">
+                    <span class="car-badge premium">Premium</span>
+                </div>
+                <div class="car-info">
+                    <div class="car-header">
+                        <h3>Mazda MX-5</h3>
+                        <span class="car-type">Sports</span>
+                    </div>
+                    <div class="car-features">
+                        <span>👤 2 Seats</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⛽ Petrol</span>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-price">
+                            <span class="price">Rp 1.200.000</span>
+                            <span class="price-unit">/ day</span>
+                        </div>
+                        <button class="btn-rent" id="rent-mx5">Rent Now</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ========== WHY US SECTION ========== -->
+    <section id="why-us" class="why-section">
+        <div class="section-header">
+            <p class="section-badge">Why Choose Us</p>
+            <h2>The Best Car Rental Experience</h2>
+            <p class="section-subtitle">We provide the best service to make your trip unforgettable</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card" id="feature-price">
+                <div class="feature-icon">💰</div>
+                <h3>Best Price Guarantee</h3>
+                <p>We offer the most competitive prices with no hidden fees. What you see is what you pay.</p>
+            </div>
+            <div class="feature-card" id="feature-support">
+                <div class="feature-icon">📞</div>
+                <h3>24/7 Support</h3>
+                <p>Our customer support team is available around the clock to assist you anytime, anywhere.</p>
+            </div>
+            <div class="feature-card" id="feature-quality">
+                <div class="feature-icon">✅</div>
+                <h3>Quality Vehicles</h3>
+                <p>All our vehicles are well-maintained and regularly serviced for your safety and comfort.</p>
+            </div>
+            <div class="feature-card" id="feature-delivery">
+                <div class="feature-icon">🚚</div>
+                <h3>Free Delivery</h3>
+                <p>We deliver the car to your location for free within the city area. No extra charges.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-icon">🚗</span>
+                    <span class="logo-text">CarRental</span>
+                </div>
+                <p class="footer-desc">Your trusted partner for comfortable and affordable car rental across Indonesia. Drive your dream car today.</p>
+            </div>
+
+            <div class="footer-links-group">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#cars">Cars</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group">
+                <h4>Locations</h4>
+                <ul>
+                    <li><a href="#">Yogyakarta</a></li>
+                    <li><a href="#">Bali</a></li>
+                    <li><a href="#">Jakarta</a></li>
+                    <li><a href="#">Surabaya</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>📧 info@carrental.id</li>
+                    <li>📞 +62 812-3456-7890</li>
+                    <li>📍 Yogyakarta, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CarRental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Scroll reveal animation
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.car-card, .feature-card, .stat-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+
+</html>
