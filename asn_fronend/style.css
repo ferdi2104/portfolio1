@@ -1,4 +1,3 @@
-/* ===== RESET & BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +11,24 @@ body {
     line-height: 1.6;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 30px;
 }
 
-/* ===== HEADER ===== */
 header {
     background-color: #fff;
     position: sticky;
@@ -96,7 +106,6 @@ header.scrolled {
     color: #222;
 }
 
-/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
@@ -128,7 +137,6 @@ nav ul li a.active::after {
     background-color: #d4a017;
 }
 
-/* Header gradient line */
 .header-line {
     height: 4px;
     background: linear-gradient(to right,
@@ -149,7 +157,6 @@ nav ul li a.active::after {
     );
 }
 
-/* Mobile menu button */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -180,7 +187,6 @@ nav ul li a.active::after {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ===== HERO SECTION ===== */
 .hero {
     padding: 60px 35px 50px;
     text-align: center;
@@ -203,7 +209,6 @@ nav ul li a.active::after {
     color: #222;
 }
 
-/* Gallery - black & white photos */
 .hero-gallery {
     overflow: hidden;
     max-width: 1000px;
@@ -230,7 +235,6 @@ nav ul li a.active::after {
     transform: scale(1.03);
 }
 
-/* ===== ABOUT SECTION ===== */
 .section-about {
     padding: 70px 0;
     background-color: #fafafa;
@@ -291,7 +295,6 @@ nav ul li a.active::after {
     line-height: 1.6;
 }
 
-/* ===== EVENTS SECTION ===== */
 .section-events {
     padding: 70px 0;
     background: #fff;
@@ -362,7 +365,6 @@ nav ul li a.active::after {
     line-height: 1.5;
 }
 
-/* ===== BUSINESS SECTION ===== */
 .section-business {
     padding: 70px 0;
     background: #f7f5f0;
@@ -405,7 +407,6 @@ nav ul li a.active::after {
     line-height: 1.5;
 }
 
-/* ===== CAREER SECTION ===== */
 .section-career {
     padding: 70px 0;
     background: #fff;
@@ -462,7 +463,6 @@ nav ul li a.active::after {
     background: #d4a017;
 }
 
-/* ===== BLOG SECTION ===== */
 .section-blog {
     padding: 70px 0;
     background: #fafafa;
@@ -528,7 +528,6 @@ nav ul li a.active::after {
     line-height: 1.5;
 }
 
-/* ===== CONTACT SECTION ===== */
 .section-contact {
     padding: 70px 0;
     background: #222;
@@ -651,7 +650,6 @@ nav ul li a.active::after {
     text-align: center;
 }
 
-/* ===== FOOTER ===== */
 footer {
     background: #1a1a1a;
     color: #999;
@@ -728,7 +726,6 @@ footer {
     color: #666;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
     .about-cards,
     .events-grid,

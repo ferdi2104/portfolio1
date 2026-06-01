@@ -34,7 +34,7 @@
                     <li><a href="#contact">More</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -43,6 +43,7 @@
         <div class="header-line"></div>
     </header>
 
+    <main>
     <section id="home" class="hero">
         <div class="hero-content">
             <h2 class="hero-heading">Need a partner to <strong>#SeemoreHappiness</strong> in your event?</h2>
@@ -225,10 +226,18 @@
             <p class="section-desc">Konsultasikan event impian Anda bersama kami.</p>
             <div class="contact-wrapper">
                 <form class="contact-form" onsubmit="kirimPesan(event)">
+                    <label for="input-nama" class="sr-only">Nama Lengkap</label>
                     <input type="text" name="nama" placeholder="Nama Lengkap" required id="input-nama">
+
+                    <label for="input-email" class="sr-only">Alamat Email</label>
                     <input type="email" name="email" placeholder="Alamat Email" required id="input-email">
+
+                    <label for="input-subject" class="sr-only">Jenis Event</label>
                     <input type="text" name="subject" placeholder="Jenis Event" id="input-subject">
+
+                    <label for="input-pesan" class="sr-only">Pesan</label>
                     <textarea name="pesan" placeholder="Ceritakan tentang event Anda..." rows="4" required id="input-pesan"></textarea>
+
                     <button type="submit" id="btn-kirim">Kirim Pesan</button>
                 </form>
                 <div class="contact-info">
@@ -260,6 +269,8 @@
         </div>
     </section>
 
+    </main>
+
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
@@ -288,36 +299,44 @@
     </footer>
 
     <script>
-        // Smooth scroll
-        var links = document.querySelectorAll('a[href^="#"]');
-        for (var i = 0; i < links.length; i++) {
-            links[i].addEventListener('click', function(e) {
+        const links = document.querySelectorAll('a[href^="#"]');
+        const menuBtn = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('main-nav');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
-                var target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
-            });
-        }
 
-        // Form submit
+                if (navMenu.classList.contains('open')) {
+                    navMenu.classList.remove('open');
+                    if (menuBtn) {
+                        menuBtn.classList.remove('active');
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
+
         function kirimPesan(e) {
             e.preventDefault();
             document.getElementById('pesan-sukses').textContent = 'Terima kasih! Pesan Anda sudah terkirim. Kami akan segera menghubungi Anda.';
             e.target.reset();
         }
 
-        // Mobile menu toggle
-        var menuBtn = document.getElementById('menuToggle');
-        var navMenu = document.getElementById('main-nav');
-        menuBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('open');
-            menuBtn.classList.toggle('active');
-        });
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', function() {
+                const isOpen = navMenu.classList.toggle('open');
+                this.classList.toggle('active');
+                this.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
 
-        // Header scroll effect
         window.addEventListener('scroll', function() {
-            var header = document.getElementById('header');
+            const header = document.getElementById('header');
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
