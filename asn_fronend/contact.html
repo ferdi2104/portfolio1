@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Seemore Penyelenggara Acara</title>
+    <meta name="description" content="Hubungi Seemore Penyelenggara Acara untuk konsultasi acara impian Anda.">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <div class="logo-group">
+                    <div class="logo-script">Seemore</div>
+                    <span class="logo-sub">penyelenggara acara</span>
+                </div>
+                <div class="brand-info">
+                    <h1 class="brand-title">SEEMORE PENYELENGGARA ACARA</h1>
+                    <p class="brand-member">anggota Melihat Lebih Bahagia Group</p>
+                    <p class="brand-tagline">Kami membantu Anda <strong>#SeemoreHappiness</strong></p>
+                </div>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="events.html">Acara Kami</a></li>
+                    <li><a href="business.html">Bisnis Lainnya</a></li>
+                    <li><a href="career.html">Karir</a></li>
+                    <li><a href="blog.html">Artikel</a></li>
+                    <li><a href="contact.html" class="active">Kontak</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="header-line"></div>
+    </header>
+
+    <main>
+        <section class="section-contact">
+            <div class="container">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p class="section-desc">Konsultasikan acara impian Anda bersama kami.</p>
+                <div class="contact-wrapper">
+                    <form class="contact-form" onsubmit="kirimPesan(event)">
+                        <label for="input-nama" class="sr-only">Nama Lengkap</label>
+                        <input type="text" name="nama" placeholder="Nama Lengkap" required id="input-nama">
+
+                        <label for="input-email" class="sr-only">Alamat Email</label>
+                        <input type="email" name="email" placeholder="Alamat Email" required id="input-email">
+
+                        <label for="input-subject" class="sr-only">Jenis Acara</label>
+                        <input type="text" name="subject" placeholder="Jenis Acara" id="input-subject">
+
+                        <label for="input-pesan" class="sr-only">Pesan</label>
+                        <textarea name="pesan" placeholder="Ceritakan tentang acara Anda..." rows="4" required id="input-pesan"></textarea>
+
+                        <button type="submit" id="btn-kirim">Kirim Pesan</button>
+                    </form>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4>Kantor</h4>
+                                <p>Jl. Kebahagiaan No. 88, Jakarta Selatan</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@seemore-eo.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <h4>Telepon</h4>
+                                <p>0812-3456-7890</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/6281234567890" target="_blank" class="btn-wa" id="btn-whatsapp">💬 Hubungi via WhatsApp</a>
+                    </div>
+                </div>
+                <p id="pesan-sukses"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">Seemore</div>
+                <p>penyelenggara acara</p>
+                <p class="footer-member">anggota Melihat Lebih Bahagia Group</p>
+            </div>
+            <div class="footer-links">
+                <h4>Tautan Cepat</h4>
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang Kami</a>
+                <a href="events.html">Acara Kami</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+            <div class="footer-links">
+                <h4>Ikuti Kami</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Seemore Penyelenggara Acara — Melihat Lebih Bahagia Group</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('main-nav');
+
+        function kirimPesan(e) {
+            e.preventDefault();
+            document.getElementById('pesan-sukses').textContent = 'Terima kasih! Pesan Anda sudah terkirim. Kami akan segera menghubungi Anda.';
+            e.target.reset();
+        }
+
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', function() {
+                const isOpen = navMenu.classList.toggle('open');
+                this.classList.toggle('active');
+                this.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+    </script>
+</body>
+</html>

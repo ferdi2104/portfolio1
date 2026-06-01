@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acara Kami - Seemore Penyelenggara Acara</title>
+    <meta name="description" content="Lihat berbagai acara yang dikelola oleh Seemore Penyelenggara Acara.">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <div class="logo-group">
+                    <div class="logo-script">Seemore</div>
+                    <span class="logo-sub">penyelenggara acara</span>
+                </div>
+                <div class="brand-info">
+                    <h1 class="brand-title">SEEMORE PENYELENGGARA ACARA</h1>
+                    <p class="brand-member">anggota Melihat Lebih Bahagia Group</p>
+                    <p class="brand-tagline">Kami membantu Anda <strong>#SeemoreHappiness</strong></p>
+                </div>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="events.html" class="active">Acara Kami</a></li>
+                    <li><a href="business.html">Bisnis Lainnya</a></li>
+                    <li><a href="career.html">Karir</a></li>
+                    <li><a href="blog.html">Artikel</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="header-line"></div>
+    </header>
+
+    <main>
+        <section class="section-events">
+            <div class="container">
+                <h2 class="section-title">Acara Kami</h2>
+                <p class="section-desc">Beragam acara yang telah kami tangani dengan dedikasi dan kebahagiaan.</p>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80" alt="Seminar Nasional">
+                        </div>
+                        <div class="event-info">
+                            <span class="event-tag">Konferensi</span>
+                            <h3>Seminar Nasional Teknologi</h3>
+                            <p>Acara berskala nasional dengan pembicara ahli di bidang teknologi dan inovasi.</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&q=80" alt="Acara Pernikahan">
+                        </div>
+                        <div class="event-info">
+                            <span class="event-tag">Pernikahan</span>
+                            <h3>Penyelenggara Pernikahan</h3>
+                            <p>Momen istimewa pernikahan Anda kami wujudkan dengan penuh kebahagiaan.</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=500&q=80" alt="Acara Perusahaan">
+                        </div>
+                        <div class="event-info">
+                            <span class="event-tag">Korporat</span>
+                            <h3>Acara Perusahaan</h3>
+                            <p>Acara perusahaan yang berkesan untuk membangun kekompakan tim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">Seemore</div>
+                <p>penyelenggara acara</p>
+                <p class="footer-member">anggota Melihat Lebih Bahagia Group</p>
+            </div>
+            <div class="footer-links">
+                <h4>Tautan Cepat</h4>
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang Kami</a>
+                <a href="events.html">Acara Kami</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+            <div class="footer-links">
+                <h4>Ikuti Kami</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Seemore Penyelenggara Acara — Melihat Lebih Bahagia Group</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('main-nav');
+
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', function() {
+                const isOpen = navMenu.classList.toggle('open');
+                this.classList.toggle('active');
+                this.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+    </script>
+</body>
+</html>

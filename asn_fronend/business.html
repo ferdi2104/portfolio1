@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisnis Lainnya - Seemore Penyelenggara Acara</title>
+    <meta name="description" content="Lihat lini bisnis lain di bawah naungan Melihat Lebih Bahagia Group.">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <div class="logo-group">
+                    <div class="logo-script">Seemore</div>
+                    <span class="logo-sub">penyelenggara acara</span>
+                </div>
+                <div class="brand-info">
+                    <h1 class="brand-title">SEEMORE PENYELENGGARA ACARA</h1>
+                    <p class="brand-member">anggota Melihat Lebih Bahagia Group</p>
+                    <p class="brand-tagline">Kami membantu Anda <strong>#SeemoreHappiness</strong></p>
+                </div>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="events.html">Acara Kami</a></li>
+                    <li><a href="business.html" class="active">Bisnis Lainnya</a></li>
+                    <li><a href="career.html">Karir</a></li>
+                    <li><a href="blog.html">Artikel</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="header-line"></div>
+    </header>
+
+    <main>
+        <section class="section-business">
+            <div class="container">
+                <h2 class="section-title">Bisnis Lainnya</h2>
+                <p class="section-desc">Dibawah naungan Melihat Lebih Bahagia Group, kami memiliki beberapa lini bisnis lainnya.</p>
+                <div class="business-grid">
+                    <div class="business-item">
+                        <div class="business-icon">📸</div>
+                        <h3>Seemore Foto</h3>
+                        <p>Jasa dokumentasi profesional untuk segala jenis acara.</p>
+                    </div>
+                    <div class="business-item">
+                        <div class="business-icon">🎶</div>
+                        <h3>Seemore Hiburan</h3>
+                        <p>Penyedia hiburan dan talent untuk acara Anda.</p>
+                    </div>
+                    <div class="business-item">
+                        <div class="business-icon">🍽️</div>
+                        <h3>Seemore Katering</h3>
+                        <p>Layanan katering premium untuk berbagai acara.</p>
+                    </div>
+                    <div class="business-item">
+                        <div class="business-icon">🎨</div>
+                        <h3>Seemore Kreatif</h3>
+                        <p>Desain dekorasi dan branding acara yang memukau.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">Seemore</div>
+                <p>penyelenggara acara</p>
+                <p class="footer-member">anggota Melihat Lebih Bahagia Group</p>
+            </div>
+            <div class="footer-links">
+                <h4>Tautan Cepat</h4>
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang Kami</a>
+                <a href="events.html">Acara Kami</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+            <div class="footer-links">
+                <h4>Ikuti Kami</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Seemore Penyelenggara Acara — Melihat Lebih Bahagia Group</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('main-nav');
+
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', function() {
+                const isOpen = navMenu.classList.toggle('open');
+                this.classList.toggle('active');
+                this.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+    </script>
+</body>
+</html>
